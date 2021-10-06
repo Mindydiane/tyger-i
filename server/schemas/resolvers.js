@@ -15,6 +15,17 @@ const resolvers = {
         
         throw new AuthenticationError('Not logged in')
     },
+    mutation: {
+      addUser: async (parent, args) => {
+        const user = await User.create(args);
+  
+        return user;
+      },
+      login: async () => {
+  
+      }
+    }
+
   }
 }
   
