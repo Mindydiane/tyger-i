@@ -23,6 +23,9 @@ type Auth {
 }
   type Query {
     me: User
+    user(username: String!): User
+    books($title: String): [book]
+    book(bookId: ID): Book
   }
   type Mutation {
     login(email: String!, password: String!): User
